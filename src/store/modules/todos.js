@@ -43,7 +43,8 @@ const actions = {
         } else if (state.filter.status === 'uncompleted') {
           return todo.completed === false
         } else if (state.filter.status === 'favorites') {
-          return localStorage.getItem(`favorite_${todo.id}`) !== null
+          console.log(localStorage.getItem('favoriteTodoIds'))
+          return localStorage.getItem('favoriteTodoIds') !== null
         }
       })
     }
